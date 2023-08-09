@@ -10,6 +10,8 @@
         },
     ];
 
+    const form = document.querySelector(".js-form");
+
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
@@ -72,6 +74,7 @@
             return;
         } else {
             addNewTask(newTaskContent);
+            form.reset();
         }
 
     };
@@ -79,7 +82,6 @@
     const init = () => {
         render();
 
-        const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
     };
 
