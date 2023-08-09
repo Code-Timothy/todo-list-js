@@ -17,18 +17,31 @@
         render();
     };
 
+    const removeTask = (index) => {
+        tasks.splice(index, 1);
+        render();
+    };
+
     const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
                 <li style="text-decoration:${task.done === true ? "line-through" : ""}">
+                <button class="js-removeTask">Usuń</button>
                     ${task.content}
                 </li>
             `;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+        
+        const removeTasksButton = document.querySelectorAll(".js-removeTask");
+        removeTasksButton.forEach((removeTaskButton, index) => {
+            removeTaskButton.addEventListener("click", () => {
+                removeTask(index);
+            });
+        });
     };
 
     const onFormSubmit = (event) => {
