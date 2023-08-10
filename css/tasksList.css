@@ -1,0 +1,36 @@
+.tasksList {
+    display: grid;
+    margin: 0;
+    padding: 16px;
+    list-style: none;
+}
+
+.tasksList__item {
+    display: grid;
+    grid-template-columns: 1fr 25fr 1fr;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.tasksList__taskContent {
+    margin: 0;
+    padding: 0;
+}
+
+.tasksList__item--done {
+    text-decoration: line-through;
+}
+
+.tasksList__button {
+    border: none;
+    background-color: green;
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+
+.tasksList__button--remove {
+    justify-self: end;
+    background-color: red;
+}
