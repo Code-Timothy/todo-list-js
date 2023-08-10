@@ -1,0 +1,33 @@
+.tile {
+    width: 100%;
+    background-color: #fff;
+}
+
+.tile__header {
+    padding: 20px;
+    margin: 0;
+    border-bottom: 2px #eee solid;
+}
+
+.tile__form {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 7fr 1fr;
+    gap: 20px;
+}
+
+.tile__input {
+    padding: 7px;
+    border: 2px #eee solid;
+}
+
+.tile__input::placeholder {
+    color: #999;
+}
+
+.tile__button {
+    background-color: teal;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
