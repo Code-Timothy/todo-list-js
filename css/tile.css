@@ -33,3 +33,8 @@
     border: none;
     letter-spacing: 1px;
 }
+
+.tile__button:hover{
+    background-color: hsl(180, 100%, 30%);
+    cursor: pointer;
+}

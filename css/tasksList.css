@@ -29,6 +29,11 @@
     height: 30px;
 }
 
+.tasksList__button:hover{
+    opacity: 70%;
+    cursor: pointer;
+}
+
 .tasksList__button--remove {
     background-color: red;
 }
