@@ -1,5 +1,4 @@
 .tasksList {
-    display: grid;
     margin: 0;
     padding: 16px;
     list-style: none;
@@ -7,7 +6,8 @@
 
 .tasksList__item {
     display: grid;
-    grid-template-columns: 1fr 25fr 1fr;
+    grid-template-columns: 30px 1fr 30px;
+    gap: 10px;
     align-items: center;
     padding: 10px;
     border-bottom: 2px solid #eee;
@@ -26,11 +26,9 @@
     border: none;
     background-color: green;
     color: white;
-    width: 30px;
     height: 30px;
 }
 
 .tasksList__button--remove {
-    justify-self: end;
     background-color: red;
 }

@@ -13,17 +13,17 @@
 .tile__form {
     display: grid;
     padding: 20px;
-    grid-template-columns: 7fr 1fr;
+    grid-template-columns: 1fr 150px;
     gap: 20px;
 }
 
 .tile__input {
-    padding: 7px;
+    padding: 10px;
     border: 2px #eee solid;
 }
 
 .tile__input::placeholder {
-    color: #999;
+    color: #aaa;
 }
 
 .tile__button {
