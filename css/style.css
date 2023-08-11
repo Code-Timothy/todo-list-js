@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    margin-top: 25px;
+    margin: 25px 15px 25px 15px;
     width: 1200px;
     height: 600px;
 }

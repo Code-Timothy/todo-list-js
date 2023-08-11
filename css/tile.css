@@ -17,6 +17,12 @@
     gap: 20px;
 }
 
+@media(max-width: 576px) {
+    .tile__form {
+        grid-template-columns: 1fr;
+    }
+}
+
 .tile__input {
     padding: 10px;
     border: 2px #eee solid;
@@ -34,7 +40,13 @@
     letter-spacing: 1px;
 }
 
-.tile__button:hover{
+@media(max-width: 576px) {
+    .tile__button {
+        padding: 10px;
+    }
+}
+
+.tile__button:hover {
     background-color: hsl(180, 100%, 30%);
     cursor: pointer;
 }
