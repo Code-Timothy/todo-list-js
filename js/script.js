@@ -45,7 +45,7 @@
             htmlString += `
                 <li class="tasksList__item">
                     <button class="js-done tasksList__button">${task.done ? "✔" : ""}</button>
-                        <p class="tasksList__taskContent ${task.done ? "tasksList__item--done" : ""}">${task.content}</p>
+                    <p class="tasksList__taskContent ${task.done ? "tasksList__item--done" : ""}">${task.content}</p>
                     <button class="js-removeTask tasksList__button tasksList__button--remove">🗑</button>
                 </li>
             `;
