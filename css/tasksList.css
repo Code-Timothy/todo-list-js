@@ -11,6 +11,7 @@
     align-items: center;
     padding: 10px;
     border-bottom: 2px solid #eee;
+    word-break: break-word;
 }
 
 .tasksList__taskContent {
@@ -25,12 +26,13 @@
 .tasksList__button {
     border: none;
     background-color: green;
-    text-align:center;
+    text-align: center;
     color: white;
     height: 30px;
+    width: 30px;
 }
 
-.tasksList__button:hover{
+.tasksList__button:hover {
     opacity: 70%;
     cursor: pointer;
 }
