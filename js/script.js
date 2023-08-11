@@ -1,14 +1,5 @@
 {
-    const tasks = [
-        {
-            content: "zadanie testowe 1",
-            done: false,
-        },
-        {
-            content: "zadanie testowe 2",
-            done: true,
-        },
-    ];
+    const tasks = [];
 
     const form = document.querySelector(".js-form");
 
