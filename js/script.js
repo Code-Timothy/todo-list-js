@@ -8,6 +8,8 @@
         { content: "6", done: false },
     ];
 
+    let hideDoneTasks = false;
+
     const form = document.querySelector(".js-form");
 
     const addNewTask = (newTaskContent) => {
@@ -27,7 +29,11 @@
     };
 
     const toggleTaskDone = (index) => {
-        tasks[index].done = !tasks[index].done;
+        tasks = [
+            ...tasks.slice(0, index),
+            { ...tasks[index], done: !tasks[index].done },
+            ...tasks.slice(index + 1),
+        ];
         render();
     };
 
