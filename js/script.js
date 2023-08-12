@@ -37,6 +37,11 @@
         render();
     };
 
+    const markAllDone = () => {
+        tasks.map((task) => task.done = true);
+        render();
+    };
+
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-removeTask");
 
@@ -53,6 +58,18 @@
                 toggleTaskDone(index);
             });
         });
+    };
+
+    const bindHeaderButtonsEvents = () => {
+        const hideDoneTasksButton = document.querySelector(".js-hideDoneButton");
+        const markAllTasksDone = document.querySelector(".js-markAllTasksDoneButton");
+
+        if (tasks.length !== 0) {
+            markAllTasksDone.addEventListener("click", markAllDone);
+        } else {
+            return;
+        }
+
     };
 
     const renderTasks = () => {
@@ -74,9 +91,9 @@
     const renderButtons = () => {
         const headerButtons = document.querySelector(".js-headerButtons");
         headerButtons.innerHTML = `
-            <button class="tile__button">Ukryj ukończone</button>
-            <button class="tile__button">Ukończ wszystkie</button>
-        `;
+        <button class="tile__button js-hideDoneButton">Ukryj ukończone</button>
+        <button class="tile__button js-markAllTasksDoneButton">Ukończ wszystkie</button>
+    `;
     };
 
     const render = () => {
@@ -84,6 +101,7 @@
         renderButtons();
 
         bindEvents();
+        bindHeaderButtonsEvents();
     };
 
     const onFormSubmit = (event) => {
