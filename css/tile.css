@@ -5,6 +5,13 @@
 }
 
 .tile__header {
+    margin: 0;
+}
+
+.tile__headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     margin: 0;
     border-bottom: 2px #eee solid;

@@ -55,7 +55,7 @@
         });
     };
 
-    const render = () => {
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
@@ -69,6 +69,19 @@
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+    };
+
+    const renderButtons = () => {
+        const headerButtons = document.querySelector(".js-headerButtons");
+        headerButtons.innerHTML = `
+            <button class="tile__button">Ukryj ukończone</button>
+            <button class="tile__button">Ukończ wszystkie</button>
+        `;
+    };
+
+    const render = () => {
+        renderTasks();
+        renderButtons();
 
         bindEvents();
     };
