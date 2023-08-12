@@ -1,17 +1,24 @@
 {
-    const tasks = [];
+    let tasks = [
+        { content: "1", done: false },
+        { content: "2", done: false },
+        { content: "3", done: false },
+        { content: "4", done: false },
+        { content: "5", done: false },
+        { content: "6", done: false },
+    ];
 
     const form = document.querySelector(".js-form");
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
-        render();
+        tasks = [
+            ...tasks,
+            { content: newTaskContent },
+        ];
+        render()
     };
 
     const removeTask = (index) => {
-        tasks.splice(index, 1);
         render();
     };
 
