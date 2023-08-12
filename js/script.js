@@ -19,6 +19,10 @@
     };
 
     const removeTask = (index) => {
+        tasks = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index + 1),
+        ];
         render();
     };
 
