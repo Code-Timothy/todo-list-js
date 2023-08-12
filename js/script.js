@@ -1,11 +1,5 @@
 {
     let tasks = [
-        { content: "1", done: false },
-        { content: "2", done: false },
-        { content: "3", done: false },
-        { content: "4", done: false },
-        { content: "5", done: false },
-        { content: "6", done: false },
     ];
 
     let hideDoneTasks = false;
@@ -69,7 +63,6 @@
         } else {
             return;
         }
-
     };
 
     const renderTasks = () => {
@@ -90,10 +83,15 @@
 
     const renderButtons = () => {
         const headerButtons = document.querySelector(".js-headerButtons");
-        headerButtons.innerHTML = `
-        <button class="tile__button js-hideDoneButton">Ukryj ukończone</button>
-        <button class="tile__button js-markAllTasksDoneButton">Ukończ wszystkie</button>
-    `;
+
+        if (tasks.length === 0) {
+            return headerButtons.innerHTML = "";
+        } else {
+            return (headerButtons.innerHTML = `
+                <button class="tile__button js-hideDoneButton">Ukryj ukończone</button>
+                <button class="tile__button js-markAllTasksDoneButton">Ukończ wszystkie</button>
+            `);
+        }
     };
 
     const render = () => {
