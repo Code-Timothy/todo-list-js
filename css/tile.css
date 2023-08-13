@@ -16,3 +16,19 @@
     margin: 0;
     border-bottom: 2px #eee solid;
 }
+
+.tile__button {
+    background-color: white;
+    border: none;
+    color: teal;
+    transition: 1s;
+}
+
+.tile__button:hover {
+    cursor: pointer;
+    color: hsl(180, 100%, 30%);
+}
+
+.tile__button:disabled {
+    color: #999;
+}

@@ -35,6 +35,7 @@
     background-color: green;
     color: white;
     height: 30px;
+    transition: 1s;
 }
 
 .tasksList__button:hover {
