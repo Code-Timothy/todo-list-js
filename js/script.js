@@ -97,7 +97,7 @@
         } else {
             return (headerButtons.innerHTML = `
                 <button class="tile__button js-hideDoneButton">${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
-                <button class="tile__button js-markAllTasksDoneButton" ${tasks.every((task) => task.done) ? "disabled" : ""}>
+                <button class="tile__button js-markAllTasksDoneButton" ${tasks.every(({ done }) => done) ? "disabled" : ""}>
                     Ukończ wszystkie
                 </button>
             `);
