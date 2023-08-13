@@ -93,7 +93,7 @@
             return headerButtons.innerHTML = "";
         } else {
             return (headerButtons.innerHTML = `
-                <button class="tile__button js-hideDoneButton">Ukryj ukończone</button>
+                <button class="tile__button js-hideDoneButton">${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
                 <button class="tile__button js-markAllTasksDoneButton">Ukończ wszystkie</button>
             `);
         }
