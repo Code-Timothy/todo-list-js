@@ -51,4 +51,5 @@
 
 .tile__button:disabled {
     color: #999;
+    cursor: default;
 }
