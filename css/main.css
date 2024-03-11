@@ -1,0 +1,38 @@
+.main {
+    display: grid;
+}
+
+.main__header {
+    border-bottom: 2px solid #eee;
+    margin: 0;
+    padding: 20px;
+}
+
+.main__section {
+    display: grid;
+    gap: 20px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.form__input {
+    border: 2px solid #ddd;
+    padding: 8px;
+}
+
+.form__button {
+    background-color: teal;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+}
+
+.form__button:hover {
+    cursor: pointer;
+    background-color: hsl(180, 100%, 30%);
+}
