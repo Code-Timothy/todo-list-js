@@ -10,6 +10,14 @@
         },
     ];
 
+    const addNewTask = (newTaskContent) => {
+        tasks.push({
+            content: newTaskContent,
+            done: false,
+        });
+        render();
+    };
+
     const removeTask = (taskIndex) => {
         tasks.splice(taskIndex, 1);
         render();
@@ -54,6 +62,20 @@
 
     const init = () => {
         render();
+
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const newTaskContent = document.querySelector(".js-newTask").value.trim();
+
+            if (newTaskContent === "") {
+                return;
+            } else {
+                addNewTask(newTaskContent);
+            }
+        });
     };
 
     init();
