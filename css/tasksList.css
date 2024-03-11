@@ -1,0 +1,36 @@
+.tasksList {
+    margin-top: 0;
+    list-style: none;
+    padding: 0 25px;
+}
+
+.tasksList__item {
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #eee;
+    color: #333;
+}
+
+.tasksList__button {
+    height: 30px;
+    border: none;
+    background-color: green;
+    color: white;
+}
+
+.tasksList__button--remove {
+    background-color: red;
+}
+
+.tasksList__button:hover {
+    cursor: pointer;
+    opacity: 90%;
+}
+
+.tasksList--completed {
+    text-decoration: line-through;
+}
