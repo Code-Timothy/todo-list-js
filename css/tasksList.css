@@ -34,6 +34,6 @@
     opacity: 90%;
 }
 
-.tasksList__item--toggleDone {
+.tasksList__content--done {
     text-decoration: line-through;
 }
