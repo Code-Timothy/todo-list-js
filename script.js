@@ -35,7 +35,7 @@
             htmlString += `
             <li class="tasksList__item">
             <button class="tasksList__button js-done">${task.done ? "✔" : ""}</button>
-            <span ${task.done ? "class=\"tasksList--completed\"" : ""}>${task.content}</span>  
+            <span ${task.done ? "class=\"tasksList__item--done\"" : ""}>${task.content}</span>  
             <button class="tasksList__button tasksList__button--remove js-remove">🗑</button>
             </li>
             `

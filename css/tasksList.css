@@ -32,6 +32,6 @@
     opacity: 90%;
 }
 
-.tasksList--completed {
+.tasksList__item--done {
     text-decoration: line-through;
 }
