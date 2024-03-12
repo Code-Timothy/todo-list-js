@@ -64,10 +64,17 @@
         });
     };
 
+    const setFocusOnInput = (inputElement) => {
+        inputElement.focus();
+    };
+
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const inputElement = document.querySelector(".js-newTask");
+        const newTaskContent = inputElement.value.trim();
+
+        setFocusOnInput(inputElement);
 
         if (newTaskContent === "") {
             return;
