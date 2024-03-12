@@ -80,6 +80,7 @@
             return;
         } else {
             addNewTask(newTaskContent);
+            inputElement.value = "";
         }
     };
 
