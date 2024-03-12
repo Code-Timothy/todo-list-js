@@ -16,11 +16,13 @@
 }
 
 .tasksList__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 30px;
     border: none;
     background-color: green;
     color: white;
-    text-align: center;
 }
 
 .tasksList__button--remove {
