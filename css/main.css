@@ -18,9 +18,16 @@
 
 .form {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr 130px;
     gap: 20px;
     padding: 0 20px 20px 20px;
+}
+
+@media(max-width: 576px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .form__input {
@@ -33,6 +40,12 @@
     color: white;
     border: none;
     letter-spacing: 1px;
+}
+
+@media(max-width: 576px) {
+    .form__button {
+        padding: 8px;
+    }
 }
 
 .form__button:hover {
