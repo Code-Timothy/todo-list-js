@@ -20,6 +20,7 @@
     border: none;
     background-color: green;
     color: white;
+    text-align: center;
 }
 
 .tasksList__button--remove {
