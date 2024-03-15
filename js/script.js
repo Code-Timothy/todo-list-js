@@ -37,6 +37,14 @@
         render();
     };
 
+    const doneAllTasks = () => {
+        tasks = tasks.map((task) => ({
+            ...task,
+            done: true,
+        }));
+        render();
+    };
+
     const renderTasks = () => {
         let htmlTasksString = "";
 
@@ -76,6 +84,14 @@
 
         bindEvents();
         bindButtonsEvents();
+    };
+
+    const bindButtonsEvents = () => {
+        const doneAllTasksButton = document.querySelector(".js-doneAllTasks");
+
+        doneAllTasksButton.addEventListener("click", () => {
+            doneAllTasks();
+        });
     };
 
     const bindEvents = () => {
