@@ -10,6 +10,8 @@
         },
     ];
 
+    let hideDoneTasks = false;
+
     const addNewTask = (newTaskContent) => {
         tasks = [
             ...tasks,
@@ -60,13 +62,20 @@
     };
 
     const renderButtons = () => {
+        let htmlButtonsString = `
+            <button class="js-doneAllTasks">Ukończ wszystkie</button>
+            <button class="js-hideAllDone">Ukryj zrobione</button>
+        `;
 
+        document.querySelector(".js-headerButtons").innerHTML = htmlButtonsString;
     };
 
     const render = () => {
         renderTasks();
+        renderButtons();
 
         bindEvents();
+        bindButtonsEvents();
     };
 
     const bindEvents = () => {
