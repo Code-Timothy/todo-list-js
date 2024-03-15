@@ -2,16 +2,39 @@
     display: grid;
 }
 
-.main__header {
-    font-size: 22px;
-    border-bottom: 2px solid #eee;
-    margin: 0;
-    padding: 20px;
-}
-
 .main__section {
     display: grid;
     gap: 20px;
     margin-bottom: 10px;
     background-color: white;
+}
+
+.main__headerContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding: 20px;
+}
+
+.main__header {
+    margin: 0;
+    font-size: 22px;
+}
+
+.main__headerButtons {
+    justify-self: end;
+}
+
+.main__headerButton {
+    margin-left: 10px;
+    border: none;
+    color: teal;
+    background-color: white;
+    transition: 1s;
+}
+
+.main__headerButton:hover {
+    cursor: pointer;
+    color: hsl(180, 100%, 30%);
 }
