@@ -45,13 +45,18 @@
         render();
     };
 
+    const toggleHideDoneTasks = () => {
+        hideDoneTasks = !hideDoneTasks;
+        render();
+    };
+
     const renderTasks = () => {
         let htmlTasksString = "";
 
         for (const task of tasks) {
             htmlTasksString += `
             <li 
-                class="tasksList__item"
+                class="tasksList__item ${task.done && hideDoneTasks ? "tasksList__item--hidden" : ""}"
             >
                 <button class="tasksList__button js-done">
                     ${task.done ? "✔" : ""}
@@ -91,6 +96,12 @@
 
         doneAllTasksButton.addEventListener("click", () => {
             doneAllTasks();
+        });
+
+        const hideDoneTasksButton = document.querySelector(".js-hideAllDone");
+
+        hideDoneTasksButton.addEventListener("click", () => {
+            toggleHideDoneTasks();
         });
     };
 
