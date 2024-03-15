@@ -36,10 +36,10 @@
     };
 
     const renderTasks = () => {
-        let htmlString = "";
+        let htmlTasksString = "";
 
         for (const task of tasks) {
-            htmlString += `
+            htmlTasksString += `
             <li 
                 class="tasksList__item"
             >
@@ -56,7 +56,11 @@
         `;
         };
 
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+        document.querySelector(".js-tasks").innerHTML = htmlTasksString;
+    };
+
+    const renderButtons = () => {
+
     };
 
     const render = () => {
