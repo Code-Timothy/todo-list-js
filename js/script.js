@@ -35,28 +35,32 @@
         render();
     };
 
-    const render = () => {
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-                <li 
-                    class="tasksList__item"
-                >
-                    <button class="tasksList__button js-done">
-                        ${task.done ? "✔" : ""}
-                    </button>
-                    <span ${task.done ? "class=\"tasksList__content--done\"" : ""}>
-                        ${task.content}
-                    </span>  
-                    <button class="tasksList__button tasksList__button--remove js-remove">
-                        🗑
-                    </button>
-                </li>
-            `;
+            <li 
+                class="tasksList__item"
+            >
+                <button class="tasksList__button js-done">
+                    ${task.done ? "✔" : ""}
+                </button>
+                <span ${task.done ? "class=\"tasksList__content--done\"" : ""}>
+                    ${task.content}
+                </span>  
+                <button class="tasksList__button tasksList__button--remove js-remove">
+                    🗑
+                </button>
+            </li>
+        `;
         };
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+    };
+
+    const render = () => {
+        renderTasks();
 
         bindEvents();
     };
