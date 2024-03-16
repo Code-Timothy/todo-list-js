@@ -1,15 +1,5 @@
 {
-    let tasks = [
-        {
-            content: "Przykładowe zadanie nr1.",
-            done: false,
-        },
-        {
-            content: "Przykładowe zadanie nr2.",
-            done: true,
-        },
-    ];
-
+    let tasks = [];
     let hideDoneTasks = false;
 
     const addNewTask = (newTaskContent) => {
