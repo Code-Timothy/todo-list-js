@@ -10,11 +10,18 @@
 }
 
 .buttons__button {
-    padding: 10px;
+    margin-left: 20px;
     border: none;
     color: teal;
     background-color: transparent;
     transition: 1s;
+}
+
+@media(max-width: 576px) {
+    .buttons__button {
+        padding: 10px;
+        margin: 0;
+    }
 }
 
 .buttons__button:hover {
