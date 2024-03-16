@@ -17,6 +17,12 @@
     padding: 20px;
 }
 
+@media(max-width: 576px) {
+    .main__headerContainer--second {
+        grid-template-columns: 1fr;
+    }
+}
+
 .main__header {
     margin: 0;
     font-size: 22px;
@@ -26,8 +32,16 @@
     justify-self: end;
 }
 
+@media(max-width: 576px) {
+    .main__headerButtons {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+    }
+}
+
 .main__headerButton {
-    margin-left: 10px;
+    padding: 10px;
     border: none;
     color: teal;
     background-color: white;
@@ -40,5 +54,6 @@
 }
 
 .main__headerButton:disabled {
+    cursor: default;
     color: #999;
 }
