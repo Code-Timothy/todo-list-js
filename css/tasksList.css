@@ -1,7 +1,7 @@
 .tasksList {
-    margin-top: 0;
     list-style: none;
-    padding: 0 25px;
+    margin: 0;
+    padding: 0;
 }
 
 .tasksList__item {
@@ -9,7 +9,7 @@
     grid-template-columns: auto 1fr auto;
     gap: 10px;
     align-items: center;
-    padding: 15px 0;
+    padding: 10px;
     border-bottom: 2px solid #eee;
     color: #333;
 }
@@ -19,12 +19,10 @@
 }
 
 .tasksList__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: none;
     height: 30px;
     width: 30px;
-    border: none;
+    padding: 0;
     background-color: green;
     color: white;
     transition: 1s;

@@ -1,0 +1,29 @@
+.buttons {
+    justify-self: end;
+}
+
+@media(max-width: 576px) {
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+    }
+}
+
+.buttons__button {
+    padding: 10px;
+    border: none;
+    color: teal;
+    background-color: white;
+    transition: 1s;
+}
+
+.buttons__button:hover {
+    cursor: pointer;
+    color: hsl(180, 100%, 35%);
+}
+
+.buttons__button:disabled {
+    cursor: default;
+    color: #999;
+}

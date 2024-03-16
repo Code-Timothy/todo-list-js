@@ -21,7 +21,10 @@
     const toggleTaskDone = (taskIndex) => {
         tasks = [
             ...tasks.slice(0, taskIndex),
-            { ...tasks[taskIndex], done: !tasks[taskIndex].done },
+            {
+                ...tasks[taskIndex],
+                done: !tasks[taskIndex].done
+            },
             ...tasks.slice(taskIndex + 1),
         ];
         render();
@@ -70,12 +73,12 @@
         if (tasks.length > 0) {
             htmlButtonsString += `
                 <button
-                    class="main__headerButton js-hideAllDone"
+                    class="buttons__button js-hideAllDone"
                 >
                     ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
                 </button>
                 <button 
-                    class="main__headerButton js-doneAllTasks" ${(tasks.every((task) => task.done) ? "disabled" : "")}
+                    class="buttons__button js-doneAllTasks" ${(tasks.every(({ done }) => done) ? "disabled" : "")}
                 >
                     Ukończ wszystkie
                 </button>
@@ -87,28 +90,15 @@
         document.querySelector(".js-headerButtons").innerHTML = htmlButtonsString;
     };
 
-    const render = () => {
-        renderTasks();
-        renderButtons();
-
-        bindRemoveEvents();
-        bindToggleDoneEvents();
-        bindButtonsEvents();
-    };
-
     const bindButtonsEvents = () => {
         if (tasks.length > 0) {
             const doneAllTasksButton = document.querySelector(".js-doneAllTasks");
 
-            doneAllTasksButton.addEventListener("click", () => {
-                doneAllTasks();
-            });
+            doneAllTasksButton.addEventListener("click", doneAllTasks);
 
             const hideDoneTasksButton = document.querySelector(".js-hideAllDone");
 
-            hideDoneTasksButton.addEventListener("click", () => {
-                toggleHideDoneTasks();
-            });
+            hideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
         };
     };
 
@@ -134,6 +124,15 @@
 
     const setFocusOnInput = (inputElement) => {
         inputElement.focus();
+    };
+
+    const render = () => {
+        renderTasks();
+        renderButtons();
+
+        bindRemoveEvents();
+        bindToggleDoneEvents();
+        bindButtonsEvents();
     };
 
     const onFormSubmit = (event) => {
