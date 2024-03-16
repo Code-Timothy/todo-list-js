@@ -5,10 +5,28 @@
 }
 
 .section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+@media(max-width: 576px) {
+    .section__header {
+        flex-direction: column;
+    }
+}
+
+.section__title {
     font-size: 20px;
     padding: 20px;
     margin: 0;
-    border-bottom: 1px solid #ddd;
+}
+
+@media(max-width: 576px) {
+    .section__title {
+        align-self: flex-start;
+    }
 }
 
 .section__body {

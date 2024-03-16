@@ -1,12 +1,11 @@
 .buttons {
-    justify-self: end;
+    padding: 20px;
 }
 
 @media(max-width: 576px) {
     .buttons {
         display: flex;
         flex-direction: column;
-        justify-self: center;
     }
 }
 
@@ -14,7 +13,7 @@
     padding: 10px;
     border: none;
     color: teal;
-    background-color: white;
+    background-color: transparent;
     transition: 1s;
 }
 
