@@ -50,7 +50,7 @@
 
 .main__headerButton:hover {
     cursor: pointer;
-    color: hsl(180, 100%, 30%);
+    color: hsl(180, 100%, 35%);
 }
 
 .main__headerButton:disabled {

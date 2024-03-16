@@ -27,6 +27,7 @@
     border: none;
     background-color: green;
     color: white;
+    transition: 1s;
 }
 
 .tasksList__button--remove {
@@ -35,7 +36,7 @@
 
 .tasksList__button:hover {
     cursor: pointer;
-    opacity: 90%;
+    opacity: 80%;
 }
 
 .tasksList__content--done {
