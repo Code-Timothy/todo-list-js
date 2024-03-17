@@ -67,9 +67,7 @@
                     ${task.content}
                 </span>
                 <button class="tasksList__button tasksList__button--edit js-edit">🖊</button>  
-                <button class="tasksList__button tasksList__button--remove js-remove">
-                    🗑
-                </button>
+                <button class="tasksList__button tasksList__button--remove js-remove">🗑</button>
             </li>
         `;
         };
@@ -95,7 +93,7 @@
             `;
         } else {
             htmlButtonsString += ``;
-        };
+        }
 
         document.querySelector(".js-headerButtons").innerHTML = htmlButtonsString;
     };
@@ -103,13 +101,11 @@
     const bindButtonsEvents = () => {
         if (tasks.length > 0) {
             const doneAllTasksButton = document.querySelector(".js-doneAllTasks");
-
             doneAllTasksButton.addEventListener("click", doneAllTasks);
 
             const hideDoneTasksButton = document.querySelector(".js-hideAllDone");
-
             hideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
-        };
+        }
     };
 
     const bindEditEvents = () => {
