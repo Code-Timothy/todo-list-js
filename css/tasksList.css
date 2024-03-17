@@ -6,7 +6,7 @@
 
 .tasksList__item {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr auto auto;
     gap: 10px;
     align-items: center;
     padding: 10px;
@@ -32,8 +32,13 @@
     background-color: red;
 }
 
+.tasksList__button--edit {
+    background-color: #FFBA08;
+}
+
 .tasksList__button:hover {
     cursor: pointer;
+    transform: scale(1.1);
     opacity: 80%;
 }
 

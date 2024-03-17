@@ -66,7 +66,7 @@
                 <span class="js-taskContent ${task.done ? "tasksList__content--done" : ""}">
                     ${task.content}
                 </span>
-                <button class="js-edit">🖊</button>  
+                <button class="tasksList__button tasksList__button--edit js-edit">🖊</button>  
                 <button class="tasksList__button tasksList__button--remove js-remove">
                     🗑
                 </button>
