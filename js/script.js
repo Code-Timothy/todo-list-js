@@ -18,6 +18,15 @@
         render();
     };
 
+    const editTask = (taskIndex, newContent) => {
+        tasks = [
+            ...tasks.slice(0, taskIndex),
+            { ...tasks[taskIndex], content: newContent },
+            ...tasks.slice(taskIndex + 1),
+        ];
+        render();
+    };
+
     const toggleTaskDone = (taskIndex) => {
         tasks = [
             ...tasks.slice(0, taskIndex),
@@ -54,9 +63,10 @@
                 <button class="tasksList__button js-done">
                     ${task.done ? "✔" : ""}
                 </button>
-                <span ${task.done ? "class=\"tasksList__content--done\"" : ""}>
+                <span class="js-taskContent ${task.done ? "tasksList__content--done" : ""}">
                     ${task.content}
-                </span>  
+                </span>
+                <button class="js-edit">🖊</button>  
                 <button class="tasksList__button tasksList__button--remove js-remove">
                     🗑
                 </button>
@@ -102,6 +112,27 @@
         };
     };
 
+    const bindEditEvents = () => {
+        const editButtons = document.querySelectorAll(".js-edit");
+
+        editButtons.forEach((editButton, taskIndex) => {
+            editButton.addEventListener("click", () => {
+                const taskContentElement = document.querySelectorAll(".js-taskContent")[taskIndex];
+                taskContentElement.setAttribute("contentEditable", true);
+                taskContentElement.focus();
+            });
+        });
+
+        const taskContentElements = document.querySelectorAll(".js-taskContent");
+
+        taskContentElements.forEach((taskContentElement, taskIndex) => {
+            taskContentElement.addEventListener("blur", () => {
+                const newContent = taskContentElement.innerText.trim();
+                editTask(taskIndex, newContent);
+            });
+        });
+    };
+
     const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -132,6 +163,7 @@
 
         bindRemoveEvents();
         bindToggleDoneEvents();
+        bindEditEvents();
         bindButtonsEvents();
     };
 
