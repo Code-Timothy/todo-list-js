@@ -1,5 +1,8 @@
 {
-    let tasks = [];
+    let tasks = [
+        { content: "Learn some new English words!", done: false },
+        { content: "Watch a new movie!", done: true },
+    ];
     let hideDoneTasks = false;
 
     const addNewTask = (newTaskContent) => {
