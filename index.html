@@ -4,21 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/container.css">
     <script defer src="./js/script.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <div>
-        <form class="js-form">
-            <label>
-                <input class="js-newTask" type="text" required>
-                <button>Dodaj Zadanie</button>
-            </label>
-        </form>
-        <ul class="js-tasksList"></ul>
-    </div>
+    <main class="container">
+        <header>Lista zadań</header>
+        <section>
+            <h2>
+                Dodaj nowe zadanie
+            </h2>
+            <div>
+                <form class="js-form">
+                    <label>
+                        <input class="js-newTask" type="text" required>
+                        <button>Dodaj Zadanie</button>
+                    </label>
+                </form>
+            </div>
+        </section>
+        <section>
+            <ul class="js-tasksList"></ul>
+        </section>
+    </main>
 </body>
 
 </html>
