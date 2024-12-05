@@ -19,6 +19,8 @@
         renderTasks();
     };
 
+    const removeTask = () => { };
+
     const onFormSubmit = () => {
         const formElement = document.querySelector(".js-form");
 
@@ -40,7 +42,7 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li>
+            <li style="${task.done ? "text-decoration: line-through" : ""}">
             ${task.content}
             </li>
             `;
