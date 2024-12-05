@@ -1,0 +1,35 @@
+.tasksList {
+    list-style: none;
+    padding: 0;
+}
+
+.tasksList__item {
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.tasksList__button {
+    border: none;
+    height: 30px;
+    font-size: 16px;
+    background-color: green;
+    color: white;
+    padding: 5px;
+}
+
+.tasksList__button:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.tasksList__button--remove {
+    background-color: red;
+}
+
+.tasksList__item--done {
+    text-decoration: line-through;
+}
