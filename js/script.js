@@ -29,22 +29,6 @@
         renderTasks();
     };
 
-    const onFormSubmit = () => {
-        const formElement = document.querySelector(".js-form");
-
-        formElement.addEventListener("submit", (event) => {
-            event.preventDefault();
-
-            const newTaskContent = document.querySelector(".js-newTask").value.trim();
-
-            if (newTaskContent === "") {
-                return;
-            }
-
-            addNewTask(newTaskContent);
-        });
-    };
-
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -68,12 +52,14 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li style="${task.done ? "text-decoration: line-through" : ""}">
-            <button class="js-remove">Usuń</button>
-            <button class="js-done">zrobione</button>
-            ${task.content}
+            <li
+              ${task.done ? " style=\"text-decoration: line-through\"" : ""}
+            >
+              <button class="js-remove">Usuń</button>
+              <button class="js-done">zrobione</button>
+              ${task.content}
             </li>
-            `;
+          `;
         };
 
         document.querySelector(".js-tasksList").innerHTML = htmlString;
@@ -81,9 +67,24 @@
         bindEvents();
     };
 
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+
+        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+
+        if (newTaskContent === "") {
+            return;
+        }
+
+        addNewTask(newTaskContent);
+    };
+
     const init = () => {
         renderTasks();
-        onFormSubmit();
+
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("submit", onFormSubmit);
     };
 
     init();
