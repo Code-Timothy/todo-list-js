@@ -10,6 +10,20 @@
         },
     ];
 
+    const onFormSubmit = () => {
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const newTaskContent = document.querySelector(".js-newTask").value.trim();
+
+            if (newTaskContent === "") {
+                return;
+            }
+        });
+    };
+
     const renderTasks = () => {
         let htmlString = "";
 
@@ -26,6 +40,7 @@
 
     const init = () => {
         renderTasks();
+        onFormSubmit();
     };
 
     init();
