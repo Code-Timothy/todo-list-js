@@ -10,6 +10,15 @@
         },
     ];
 
+    const addNewTask = (newTaskContent) => {
+        tasks.push({
+            content: newTaskContent,
+            done: false,
+        });
+
+        renderTasks();
+    };
+
     const onFormSubmit = () => {
         const formElement = document.querySelector(".js-form");
 
@@ -21,6 +30,8 @@
             if (newTaskContent === "") {
                 return;
             }
+
+            addNewTask(newTaskContent);
         });
     };
 
