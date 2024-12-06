@@ -20,6 +20,11 @@
     border: none;
 }
 
+.form__button:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
 .form__input {
     font-family: inherit;
     border: 1px solid #eee;
