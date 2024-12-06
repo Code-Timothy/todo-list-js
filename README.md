@@ -26,4 +26,4 @@ You can add your tasks [here](https://code-timothy.github.io/todo-list-js/)
 - CSS (media-queries, flox-box, grid)
 - HTML
 - JAVASCRIPT ES6
-- 2Markdown
+- Markdown
