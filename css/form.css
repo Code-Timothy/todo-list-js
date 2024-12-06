@@ -1,13 +1,20 @@
 .form {
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 1fr 150px;
     gap: 20px;
     letter-spacing: 1px;
+}
+
+@media(max-width: 767px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
 }
 
 .form__button {
     font-family: inherit;
     font-size: 16px;
+    padding: 10px;
     background-color: teal;
     color: white;
     border: none;
