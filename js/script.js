@@ -80,7 +80,7 @@
         if (tasks.length > 0) {
             headerButtonsHTMLContent += `
                 <button class="section__button js-hideAllDone">Ukryj ukończone</button>
-                <button class="section__button js-setAllAsDone">Ukończ wszystkie</button>
+                <button class="section__button js-setAllAsDone" ${tasks.every(({ done }) => done) ? "disabled" : ""} >Ukończ wszystkie</button>
             `;
         }
 

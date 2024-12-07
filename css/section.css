@@ -18,6 +18,10 @@
     border: none;
 }
 
+.section__button:disabled {
+    color: gray;
+}
+
 .section__button:hover {
     opacity: 80%;
     cursor: pointer;
