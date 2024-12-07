@@ -2,7 +2,7 @@
 
 ## Description 📖
 
-This is simple to-do-list app where you can add, delete and edit tasks from list. Additionally you can mark your task as done when it is done.
+This is simple to-do-list app where you can add and delete tasks from list. Additionally you can mark your task as done when it is done.
 
 ## Demo 💻
 
@@ -15,10 +15,12 @@ You can add your tasks [here](https://code-timothy.github.io/todo-list-js/)
 3. Now you can add next task in the same way.
 4. You can mark your task as done by the click in the green button on the left side of task.
 5. In the end when you want delete a task, just click a red button on the right side of task.
+6. You can use the "Ukryj ukończone" button to hide your done tasks.
+7. You can use the "Ukończ wszystkie" button to mark all your tasks as done.
 
 ## GIF Tutorial 👀
 
-![howtouse](./images/howtousetdl.gif)
+![howtouse](./images/howtousetdl2.gif)
 
 ## Technologies 🛠
 
