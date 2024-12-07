@@ -13,6 +13,10 @@
     word-break: break-word;
 }
 
+.tasksList__item--hidden {
+    display: none;
+}
+
 .tasksList__button {
     width: 30px;
     height: 30px;
