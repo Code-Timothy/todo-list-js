@@ -3,9 +3,28 @@
     margin: 5px;
 }
 
+.section__headerContainer {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr auto auto;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.section__button {
+    background: white;
+    color: teal;
+    margin: 0 10px;
+    border: none;
+}
+
+.section__button:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
 .section__header {
     margin: 0;
-    border-bottom: 1px solid #ddd;
     padding: 20px;
 }
 

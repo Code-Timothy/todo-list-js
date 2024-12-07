@@ -65,7 +65,7 @@
     };
 
     const bindButtonsEvents = () => {
-        const setAllTasksAsDoneButton = document.querySelector(".js-markAllAsDone");
+        const setAllTasksAsDoneButton = document.querySelector(".js-setAllAsDone");
         const hideAllDoneTasksButton = document.querySelector(".js-hideAllDone");
 
         if (tasks.length > 0) {
@@ -79,8 +79,8 @@
 
         if (tasks.length > 0) {
             headerButtonsHTMLContent += `
-                <button class="js-markAllAsDone">Ukończ wszystkie</button>
-                <button class="js-hideAllDone">Ukryj ukończone</button>
+                <button class="section__button js-hideAllDone">Ukryj ukończone</button>
+                <button class="section__button js-setAllAsDone">Ukończ wszystkie</button>
             `;
         }
 
