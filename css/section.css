@@ -11,10 +11,25 @@
     align-items: center;
 }
 
+@media (max-width:767px) {
+    .section__headerContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .section__additionalHeaderContent {
+        display: grid;
+        gap: 10px;
+        padding: 0px 20px 20px 20px;
+    }
+}
+
 .section__button {
     background: white;
     color: teal;
     margin: 0 10px;
+    padding: 10px;
     border: none;
 }
 
@@ -33,5 +48,5 @@
 }
 
 .section__content {
-    padding: 20px;
+    padding: 10px 20px;
 }
