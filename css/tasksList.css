@@ -25,6 +25,7 @@
     background-color: green;
     color: white;
     padding: 5px;
+    transition: 1s;
 }
 
 .tasksList__button:hover {
