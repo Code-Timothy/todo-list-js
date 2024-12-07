@@ -20,9 +20,11 @@
     };
 
     const toggleTaskDone = (taskIndex) => {
-        tasks.map((task, index) =>
-            taskIndex === index ? task.done = !task.done : task,
-        );
+        tasks = [
+            ...tasks.slice(0, taskIndex),
+            { ...tasks[taskIndex], done: !tasks[taskIndex].done },
+            ...tasks.slice(taskIndex + 1),
+        ];
 
         renderTasks();
     };
