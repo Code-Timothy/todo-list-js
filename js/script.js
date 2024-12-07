@@ -29,6 +29,15 @@
         render();
     };
 
+    const setAllTasksAsDone = () => {
+        tasks = tasks.map((task) => ({
+            ...task,
+            done: true,
+        }));
+
+        render();
+    };
+
     const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -47,6 +56,14 @@
                 toggleTaskDone(index);
             });
         });
+    };
+
+    const bindButtonsEvents = () => {
+        const setAllTasksAsDoneButton = document.querySelector(".js-markAllAsDone");
+
+        if (tasks.length > 0) {
+            setAllTasksAsDoneButton.addEventListener("click", setAllTasksAsDone);
+        }
     };
 
     const renderButtons = () => {
@@ -84,6 +101,7 @@
 
         bindRemoveEvents();
         bindToggleDoneEvents();
+        bindButtonsEvents();
     };
 
     const onFormSubmit = (event) => {
