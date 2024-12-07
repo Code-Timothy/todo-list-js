@@ -96,7 +96,7 @@
               <span class="${task.done ? "tasksList__item--done" : ""}"> ${task.content}</span>            
               <button class="tasksList__button tasksList__button--remove js-remove">🗑</button>
             </li>
-        `).join("")
+        `).join("");
 
         document.querySelector(".js-tasksList").innerHTML = tasksListHTMLContent;
     };
