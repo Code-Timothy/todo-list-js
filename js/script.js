@@ -90,15 +90,13 @@
     const renderTasks = () => {
         let tasksListHTMLContent = "";
 
-        for (const task of tasks) {
-            tasksListHTMLContent += `
+        tasksListHTMLContent = tasks.map((task) => `
             <li class="tasksList__item ${task.done && hideDoneTasks ? "tasksList__item--hidden" : ""}">
               <button class="tasksList__button js-done">${task.done ? "✔" : ""}</button>
               <span class="${task.done ? "tasksList__item--done" : ""}"> ${task.content}</span>            
               <button class="tasksList__button tasksList__button--remove js-remove">🗑</button>
             </li>
-          `;
-        };
+        `).join("")
 
         document.querySelector(".js-tasksList").innerHTML = tasksListHTMLContent;
     };
