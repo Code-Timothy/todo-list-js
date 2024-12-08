@@ -35,7 +35,7 @@
         render();
     };
 
-    const setAllTasksAsDone = () => {
+    const markAllTasksDone = () => {
         tasks = tasks.map((task) => ({
             ...task,
             done: true,
@@ -65,26 +65,33 @@
     };
 
     const bindButtonsEvents = () => {
-        const setAllTasksAsDoneButton = document.querySelector(".js-setAllAsDone");
-        const hideAllDoneTasksButton = document.querySelector(".js-hideAllDone");
+        const markAllDoneButton = document.querySelector(".js-markAllDone");
+        const hideDoneTasksButton = document.querySelector(".js-toggleHideDoneTasks");
 
         if (tasks.length > 0) {
-            setAllTasksAsDoneButton.addEventListener("click", setAllTasksAsDone);
-            hideAllDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
+            markAllDoneButton.addEventListener("click", markAllTasksDone);
+            hideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
         }
     };
 
     const renderButtons = () => {
-        let headerButtonsHTMLContent = "";
+        const buttonsElement = document.querySelector(".js-headerButtons");
 
-        if (tasks.length > 0) {
-            headerButtonsHTMLContent += `
-                <button class="section__button js-hideAllDone">${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
-                <button class="section__button js-setAllAsDone" ${tasks.every(({ done }) => done) ? "disabled" : ""} >Ukończ wszystkie</button>
-            `;
+        if (!tasks.length) {
+            return buttonsElement.innerHTML = "";
         }
 
-        document.querySelector(".js-headerButtons").innerHTML = headerButtonsHTMLContent;
+        buttonsElement.innerHTML = `
+                <button class="section__button js-toggleHideDoneTasks">
+                    ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+                </button>
+                <button 
+                    class="section__button js-markAllDone" 
+                    ${tasks.every(({ done }) => done) ? "disabled" : ""} 
+                >
+                    Ukończ wszystkie
+                </button>
+            `;
     };
 
     const renderTasks = () => {
