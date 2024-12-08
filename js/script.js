@@ -75,18 +75,18 @@
     };
 
     const renderButtons = () => {
-        const buttonsElement = document.querySelector(".js-headerButtons");
+        const buttonsElement = document.querySelector(".js-buttons");
 
         if (!tasks.length) {
             return buttonsElement.innerHTML = "";
         }
 
         buttonsElement.innerHTML = `
-                <button class="section__button js-toggleHideDoneTasks">
+                <button class="buttons__button js-toggleHideDoneTasks">
                     ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
                 </button>
                 <button 
-                    class="section__button js-markAllDone" 
+                    class="buttons__button js-markAllDone" 
                     ${tasks.every(({ done }) => done) ? "disabled" : ""} 
                 >
                     Ukończ wszystkie

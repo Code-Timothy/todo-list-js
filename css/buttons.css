@@ -1,0 +1,33 @@
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+    .buttons {
+        flex-direction: column;
+    }
+}
+
+.buttons__button {
+    background: transparent;
+    color: teal;
+    margin: 0 0 0 20px;
+    border: none;
+    transition: color 0.5s;
+}
+
+@media (max-width: 767px) {
+    .buttons__button {
+        margin: 10px;
+    }
+}
+
+.buttons__button:disabled {
+    color: gray;
+}
+
+.buttons__button:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
